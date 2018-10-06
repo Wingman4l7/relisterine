@@ -31,10 +31,9 @@ For now, this is as simple as:
 
 	python relisterine.py
 
-If there are no listings that need to be renewed, it will output that message and complete.
+If there are no listings that need to be renewed, it will output that message and complete.  The way it is written, it should not leave any spawned console or browser windows open upon successful completion.
 
-It is most useful when scheduled to run via cron / Windows Task Scheduler / etc.
-The way it is written, it should not leave any spawned console or browser windows open upon successful completion.
+It is most useful when scheduled to run via cron / Windows Task Scheduler / etc.  If run via a scheduler, you may need to change the `config.read()` line to be an abolute path instead of a relative path, for it to work properly.  
 
 ### Config File ###
 Simply add in your Craigslist username and password to the config file, and you should be good to go!

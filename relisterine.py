@@ -102,7 +102,7 @@ def click_renew_links(renew_links):
 def main():
     global chromedriver  # use the global chromedriver variable.
 
-    chromedriver = webdriver.Chrome('/Python27/selenium/webdriver/chromedriver', chrome_options=opts)
+    chromedriver = webdriver.Chrome(executable_path='/Python27/selenium/webdriver/chromedriver', chrome_options=opts)
     chromedriver.get('https://accounts.craigslist.org/login/home')
 
     ### parse config file with login credentials ###

@@ -2,7 +2,7 @@
 
 import sys
 import time
-import ConfigParser
+import configparser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from colorama import init, Fore, Style
@@ -102,11 +102,11 @@ def click_renew_links(renew_links):
 def main():
     global chromedriver  # use the global chromedriver variable.
 
-    chromedriver = webdriver.Chrome(executable_path='/Python27/selenium/webdriver/chromedriver', chrome_options=opts)
+    chromedriver = webdriver.Chrome(executable_path='/Python27/selenium/webdriver/chromedriver', options=opts)
     chromedriver.get('https://accounts.craigslist.org/login/home')
 
     ### parse config file with login credentials ###
-    config = ConfigParser.ConfigParser()
+    config = configparser.ConfigParser()
     config.read('relisterine_config.ini')
     email_handle = config.get('craigslist.org', 'EmailHandle')
     password = config.get('craigslist.org', 'Password')
